@@ -1,7 +1,7 @@
 # Bamboo full log formatter
 
-- Based on (https://github.com/samueldg/bamboo-log-enhancer)
-- Icon theme: (https://snwh.org/paper)
+- Based on https://github.com/samueldg/bamboo-log-enhancer
+- Icon theme: https://snwh.org/paper
 
 ### INSTALLATION:
 1. Clone repo
@@ -12,5 +12,5 @@
 
 
 ### NOTE:
-The extension only formats log files that match the url **http(s)://$(servername)/bamboo/\*.log**
+The extension only formats log files that match the url **http(s)://$(servername)/bamboo/\*.log**  
 If your bamboo server is configured to use a different path please adjust on the matches section in the *manifest.json* file
