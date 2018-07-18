@@ -1,0 +1,56 @@
+.build {
+    color: blue;
+}
+
+.command {
+    /*color: green;*/
+    margin: 10px;
+    padding: 10px;
+    color: #000;
+    border: solid 1px #3c78b5;
+    background-color: #D8E4F1;    
+}
+
+.error {
+    color: red;
+}
+
+.simple {
+    color: black;
+}
+
+/*.log {
+    white-space: pre-wrap;
+    //font-family: monospace;
+    word-wrap: break-word;
+    display: block;
+    
+    //margin-top: 8px;
+} */
+
+table {
+    border-collapse: collapse;
+    font: 11px Menlo,Monaco,"Courier New",monospace;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 11px;
+}
+
+.time {
+    padding: 0 8px 0 4px;
+    white-space: nowrap;
+    color: gray;
+    width: 1%;
+}
+
+div {
+    padding-bottom: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    display: block;
+}

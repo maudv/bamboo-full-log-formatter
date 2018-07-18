@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bamboo Full Log Formatter",
+  "description": "Format the bamboo full log the same way the partial log is formatted",
+  "homepage_url": "https://github.com/maudv/notyet",
+  "version": "0.1.0",
+  "icons": {
+    "16": "icons/16.png",
+    "24": "icons/24.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+
+  "content_scripts": [
+    { "matches": [
+        "*://*/bamboo/*.log"
+      ],
+      "js": ["js/color_logs.js"],
+      "css": ["css/log_lines.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "permissions": ["*://*/bamboo/*.log"]
+}
