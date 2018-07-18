@@ -2,7 +2,7 @@
 
   // Separates the log file into separate blocks, depending
   // on the type of the log line (build, command, error, simple).
-  // Each block is then colored accorging to the `log_lines.css` file.
+  // Each block is then colored according to the `log_lines.css` file.
 
   var logLineTypes = [
     'build',

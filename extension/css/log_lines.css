@@ -3,7 +3,6 @@
 }
 
 .command {
-    /*color: green;*/
     margin: 10px;
     padding: 10px;
     color: #000;
@@ -18,15 +17,6 @@
 .simple {
     color: black;
 }
-
-/*.log {
-    white-space: pre-wrap;
-    //font-family: monospace;
-    word-wrap: break-word;
-    display: block;
-    
-    //margin-top: 8px;
-} */
 
 table {
     border-collapse: collapse;
