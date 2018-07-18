@@ -3,13 +3,12 @@
 - Based on https://github.com/samueldg/bamboo-log-enhancer
 - Icon theme: https://snwh.org/paper
 
-### INSTALLATION:
+### CHROME INSTALLATION:
 1. Clone repo
 2. Visit chrome://extensions/
 3. Enable developer mode
 4. Load unpacked
-5. Select extension folder
-
+5. Select chrome folder
 
 ### NOTE:
 The extension only formats log files that match the url **http(s)://$(servername)/bamboo/\*.log**  
