@@ -3,7 +3,7 @@
 
   "name": "Bamboo Full Log Formatter",
   "description": "Format the bamboo full log the same way the partial log is formatted",
-  "homepage_url": "https://github.com/maudv/notyet",
+  "homepage_url": "https://github.com/maudv/bamboo-full-log-formatter",
   "version": "0.1.0",
   "icons": {
     "16": "icons/16.png",
