@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Bamboo Full Log Formatter",
-  "version": "0.1.0",
+  "version": "1",
   "description": "Format the bamboo full log the same way the partial log is formatted",
   "homepage_url": "https://github.com/maudv/bamboo-full-log-formatter",
   "icons": {
@@ -13,8 +13,7 @@
 
   "applications": {
     "gecko": {
-      "id": "maudv@maudv.net",
-      "strict_min_version": "0.1.0"
+      "strict_min_version": "48.0"
     }
   },
 

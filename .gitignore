@@ -1,2 +1,4 @@
 *.swp
 *bak
+web-ext-artifacts
+.web-extension-id
