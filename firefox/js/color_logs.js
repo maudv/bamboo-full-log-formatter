@@ -8,7 +8,9 @@
     'build',
     'command',
     'error',
-    'simple'
+    'simple',
+    'debug',
+    'warning'
   ];
   var body = document.body
   var logLines = body.innerText.split('\n');
@@ -24,14 +26,25 @@
   for (var i = 0; i < logLines.length; ++i) {
     var row = document.createElement("tr");
 
-    // Get the class to use depending on the first word
     logLine = logLines[i];
     firstWord = logLine.split('\t')[0];
 
-    if (logLineTypes.indexOf(firstWord) >= 0){
-      logLineType = firstWord;
+    // Search for specific words to get the line log type
+    if ( logLine.indexOf("[ERROR]") >= 0 || logLine.indexOf("level=error") >= 0 || logLine.indexOf("level=fatal") >= 0) {
+      logLineType = 'error';
+    } else if ( logLine.indexOf("[DEBUG]") >= 0 || logLine.indexOf("level=debug") >= 0 ) {
+      logLineType = 'debug';
+    } else if ( logLine.indexOf("[INFO]") >= 0 || logLine.indexOf("level=info") >= 0 ) {
+      logLineType = 'build';
+    } else if ( logLine.indexOf("level=warning") >= 0 ) {
+      logLineType = 'warning';
     } else {
-      logLineType = 'default';
+      // If log line type could not be determined with the log msg, get the class to use depending on the first word
+      if ( logLineTypes.indexOf(firstWord) >= 0 ){
+        logLineType = firstWord;
+      } else {
+        logLineType = 'default';
+      }
     }
 
     var lineContent = logLine.split('\t');
