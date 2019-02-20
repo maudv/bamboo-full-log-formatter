@@ -1,7 +1,7 @@
 (function() {
 
   // Separates the log file into separate blocks, depending
-  // on the type of the log line (build, command, error, simple).
+  // on the type of the log line (build, command, error, simple, debug and warning).
   // Each block is then colored according to the `log_lines.css` file.
 
   var logLineTypes = [
