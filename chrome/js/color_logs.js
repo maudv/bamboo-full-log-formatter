@@ -30,13 +30,15 @@
     firstWord = logLine.split('\t')[0];
 
     // Search for specific words to get the line log type
-    if ( logLine.indexOf("[ERROR]") >= 0 || logLine.indexOf("level=error") >= 0 || logLine.indexOf("level=fatal") >= 0) {
+    if ( firstWord === "command" ) {
+      logLineType = 'command';
+    } else if ( logLine.indexOf("[ERROR]") >= 0 || logLine.indexOf("level=error") >= 0 || logLine.indexOf("ERROR") >= 0 || logLine.indexOf("level=fatal") >= 0) {
       logLineType = 'error';
     } else if ( logLine.indexOf("[DEBUG]") >= 0 || logLine.indexOf("level=debug") >= 0 ) {
       logLineType = 'debug';
     } else if ( logLine.indexOf("[INFO]") >= 0 || logLine.indexOf("level=info") >= 0 ) {
       logLineType = 'build';
-    } else if ( logLine.indexOf("level=warning") >= 0 ) {
+    } else if ( logLine.indexOf("level=warning") >= 0 || logLine.indexOf("WARNING") >= 0) {
       logLineType = 'warning';
     } else {
       // If log line type could not be determined with the log msg, get the class to use depending on the first word
