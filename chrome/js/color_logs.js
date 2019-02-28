@@ -64,7 +64,6 @@
         cellDiv.className = logLineType;
 
         if (logLineType === "command"){
-          //var splittedLines = lineContent[j].replace(/\\n/g,"\n");
           var cellDivText = document.createTextNode(lineContent[j].replace(/\\n/g,"\n"));
         } else {
           var cellDivText = document.createTextNode(lineContent[j]);
