@@ -63,7 +63,12 @@
         var cellDiv = document.createElement("div");       
         cellDiv.className = logLineType;
 
-        var cellDivText = document.createTextNode(lineContent[j]);
+        if (logLineType === "command"){
+          //var splittedLines = lineContent[j].replace(/\\n/g,"\n");
+          var cellDivText = document.createTextNode(lineContent[j].replace(/\\n/g,"\n"));
+        } else {
+          var cellDivText = document.createTextNode(lineContent[j]);
+        }
         cellDiv.appendChild(cellDivText);
         cell.appendChild(cellDiv);
         row.appendChild(cell);
