@@ -29,14 +29,7 @@
 
 table {
     border-collapse: collapse;
-    font: 12px Menlo,Monaco,"Courier New",monospace;
-    font-style: normal;
-    font-variant-ligatures: normal;
-    font-variant-caps: normal;
-    font-variant-numeric: normal;
-    font-variant-east-asian: normal;
-    font-weight: normal;
-    font-stretch: normal;
+    font-family: "Roboto Mono","Ubuntu Mono","SF Mono","Segoe UI Mono",Menlo,Courier,monospace;
     font-size: 12px;
 }
 
