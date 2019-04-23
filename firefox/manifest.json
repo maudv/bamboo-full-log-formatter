@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Bamboo Full Log Formatter",
-  "version": "1.4",
+  "version": "1.4.1",
   "description": "Format the bamboo full log similar to how the partial log is formatted",
   "homepage_url": "https://github.com/maudv/bamboo-full-log-formatter",
   "icons": {
@@ -18,8 +18,8 @@
   },
 
   "content_scripts": [
-    { 
-      "matches": ["*://*/bamboo/*.log"],
+    {
+      "matches": ["*://*/bamboo*/*.log"],
       "js": ["js/color_logs.js"],
       "css": ["css/log_lines.css"],
       "run_at": "document_idle"
