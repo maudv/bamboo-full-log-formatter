@@ -32,7 +32,7 @@
     // Search for specific words to get the line log type
     if ( firstWord === "command" ) {
       logLineType = 'command';
-    } else if ( logLine.indexOf("[ERROR]") >= 0 || logLine.indexOf("level=error") >= 0 || logLine.indexOf("ERROR") >= 0 || logLine.indexOf("level=fatal") >= 0) {
+    } else if ( logLine.indexOf("[ERROR]") >= 0 || logLine.indexOf("level=error") >= 0 || logLine.indexOf("ERROR") >= 0 || logLine.indexOf("level=fatal") >= 0 || logLine.indexOf("result: Failed") >= 0) {
       logLineType = 'error';
     } else if ( logLine.indexOf("[DEBUG]") >= 0 || logLine.indexOf("level=debug") >= 0 ) {
       logLineType = 'debug';
@@ -60,7 +60,7 @@
 
       } else if (j == 2) {
         var cell = document.createElement("td");
-        var cellDiv = document.createElement("div");       
+        var cellDiv = document.createElement("div");
         cellDiv.className = logLineType;
 
         if (logLineType === "command"){
