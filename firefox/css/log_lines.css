@@ -7,11 +7,12 @@
     padding: 10px;
     color: #000;
     border: solid 1px #3c78b5;
-    background-color: #D8E4F1;    
+    background-color: #D8E4F1;
 }
 
 .error {
     color: red;
+    font-size: 130%;
 }
 
 .warning {
