@@ -17,8 +17,9 @@
 }
 
 .warning {
-    color: orange;
-    font-weight: bold
+    color: rgb(255, 115, 0);
+    /*font-size: 100%;*/
+    /*font-weight: bold;*/
 }
 
 .debug {

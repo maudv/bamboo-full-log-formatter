@@ -12,12 +12,14 @@
 
 .error {
     color: red;
-    font-size: 120%;
+    font-size: 110%;
+    font-weight: bold;
 }
 
 .warning {
-    color: orange;
-    font-weight: bold
+    color: rgb(255, 115, 0);
+    /*font-size: 100%;*/
+    /*font-weight: bold;*/
 }
 
 .debug {
@@ -31,7 +33,7 @@
 table {
     border-collapse: collapse;
     font-family: "Roboto Mono","Ubuntu Mono","SF Mono","Segoe UI Mono",Menlo,Courier,monospace;
-    font-size: 100%;
+    font-size: 90%;
 }
 
 .time {
