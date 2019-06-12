@@ -1,3 +1,16 @@
+var error_strings = ['ERROR','[ERROR]','FailedCreate','level=error','level=fatal','result: Failed'];
+var debug_strings = ['DEBUG', '[DEBUG]','level=debug'];
+var info_strings = ['[INFO]','level=info'];
+var warning_strings = ['WARNING','level=warning'];
+
+function contains(target, pattern){
+  var value = 0;
+  pattern.forEach(function(word){
+    value = value + target.includes(word);
+  });
+  return (value === 1)
+}
+
 (function() {
 
   // Separates the log file into separate blocks, depending
@@ -32,14 +45,14 @@
     // Search for specific words to get the line log type
     if ( firstWord === "command" ) {
       logLineType = 'command';
-    } else if ( logLine.indexOf("[ERROR]") >= 0 || logLine.indexOf("level=error") >= 0 || logLine.indexOf("ERROR") >= 0 || logLine.indexOf("level=fatal") >= 0 || logLine.indexOf("result: Failed") >= 0) {
-      logLineType = 'error';
-    } else if ( logLine.indexOf("[DEBUG]") >= 0 || logLine.indexOf("level=debug") >= 0 ) {
+    } else if (contains(logLine, debug_strings)) {
       logLineType = 'debug';
-    } else if ( logLine.indexOf("[INFO]") >= 0 || logLine.indexOf("level=info") >= 0 ) {
-      logLineType = 'build';
-    } else if ( logLine.indexOf("level=warning") >= 0 || logLine.indexOf("WARNING") >= 0) {
+    } else if (contains(logLine, warning_strings)) {
       logLineType = 'warning';
+    } else if (contains(logLine, error_strings)) {
+      logLineType = 'error';
+    } else if (contains(logLine, info_strings)) {
+      logLineType = 'build';
     } else {
       // If log line type could not be determined with the log msg, get the class to use depending on the first word
       if ( logLineTypes.indexOf(firstWord) >= 0 ){
