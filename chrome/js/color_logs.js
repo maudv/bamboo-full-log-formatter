@@ -45,14 +45,14 @@ function contains(target, pattern){
     // Search for specific words to get the line log type
     if ( firstWord === "command" ) {
       logLineType = 'command';
-    } else if (contains(logLine, debug_strings)) {
-      logLineType = 'debug';
-    } else if (contains(logLine, warning_strings)) {
-      logLineType = 'warning';
     } else if (contains(logLine, error_strings)) {
       logLineType = 'error';
+    } else if (contains(logLine, debug_strings)) {
+      logLineType = 'debug';
     } else if (contains(logLine, info_strings)) {
       logLineType = 'build';
+    } else if (contains(logLine, warning_strings)) {
+      logLineType = 'warning';
     } else {
       // If log line type could not be determined with the log msg, get the class to use depending on the first word
       if ( logLineTypes.indexOf(firstWord) >= 0 ){
