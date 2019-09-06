@@ -13,7 +13,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*/bamboo*/*.log"],
+      "matches": ["*://*/bamboo*/*build_logs*/*.log"],
       "js": ["js/color_logs.js"],
       "css": ["css/log_lines.css"],
       "run_at": "document_idle"
